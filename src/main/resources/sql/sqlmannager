@@ -1,0 +1,13 @@
+CREATE SCHEMA `bieji` ;
+CREATE TABLE `system_mannager` (
+  `idsystem_mannager` int(11) NOT NULL AUTO_INCREMENT,
+  `suername` varchar(45) NOT NULL DEFAULT '用户昵称' COMMENT '用户名',
+  `spassword` varchar(16) NOT NULL DEFAULT '0',
+  `sage` tinyint(3) NOT NULL DEFAULT '0',
+  `ssex` int(1) NOT NULL DEFAULT '1' COMMENT '1代表男，0代表女',
+  `sinttroduce` varchar(200) NOT NULL DEFAULT '该用户太懒了什么也没有留下！' COMMENT '个人简介',
+  `sstatus` int(1) NOT NULL DEFAULT '0' COMMENT '0代表没有登录',
+  PRIMARY KEY (`idsystem_mannager`),
+  UNIQUE KEY `suername_UNIQUE` (`suername`),
+  KEY `susername` (`suername`)
+) ENGINE=InnoDB AUTO_INCREMENT=1000000003 DEFAULT CHARSET=utf8 COMMENT='系统管理员'
